@@ -4,10 +4,12 @@ export interface AppConfig {
     publicUrl: string;
   };
   telegram: {
+    session: string;
     apiId: number;
     apiHash: string;
     token: string;
     secretToken: string;
+    botAdminId: string;
   };
   ngrok: {
     authToken: string;

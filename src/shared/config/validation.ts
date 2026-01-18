@@ -12,6 +12,10 @@ export const validationSchema = Joi.object({
   TELEGRAM_BOT_TOKEN: Joi.string().required(),
 
   TELEGRAM_SECRET_TOKEN: Joi.string().required(),
+
+  TELEGRAM_SESSION_STRING: Joi.string().allow('').default(''),
+
+  TELEGRAM_BOT_ADMIN_ID: Joi.string().required(),
   // NGROK
   NGROK_AUTH_TOKEN: Joi.string().required(),
 

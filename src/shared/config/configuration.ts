@@ -12,11 +12,12 @@ export default () => {
       apiHash: process.env.TELEGRAM_API_HASH,
       token: process.env.TELEGRAM_BOT_TOKEN,
       secretToken: process.env.TELEGRAM_SECRET_TOKEN,
+      session: process.env.TELEGRAM_SESSION_STRING,
+      botAdminId: process.env.TELEGRAM_BOT_ADMIN_ID,
     },
 
     ngrok: {
       authToken: process.env.NGROK_AUTH_TOKEN || '',
-      // Более понятное имя — requireNgrok / useNgrok / forceNgrok
       requireNgrok: process.env.REQUIRE_NGROK === 'true' || false,
     },
 
@@ -39,7 +40,6 @@ export default () => {
       sync: process.env.SYNC === 'true',
     },
 
-    // Удобный вычисляемый флаг — какой URL в итоге будет использоваться
     webhook: {
       baseUrl:
         publicUrl ||
